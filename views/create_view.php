@@ -1,5 +1,6 @@
 <?php
-   require_once('./models/database.php');
+   require_once('./models/post.php');
+   $posts = getPost();
 ?>
 <form action="../controllers/create_controller.php" enctype="multipart/form-data" method="post">
     <div class="container container-create">
@@ -12,6 +13,7 @@
                             <div class="profile p-2">
                                     <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="8%">
                                     <strong class="p-2 profile_name">Rady Y</strong>
+                                    
                             </div>
                         <div class="card-body">
                                 <div class="mb-3">
@@ -27,7 +29,7 @@
                         </div>
                         <div class="card-footer footer-post">
                             <button type="submit" name="post" class="btn btn-primary">Post</button>
-                            <button type="submit" class="btn btn-danger">Cancel</button>
+                            <a href="/index.php?pages=index" class="btn btn-danger">Cancel</a>
                             
                         </div>
                     </div>

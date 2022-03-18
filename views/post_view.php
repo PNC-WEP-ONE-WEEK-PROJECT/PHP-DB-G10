@@ -18,7 +18,7 @@
                 </div>
             </div>
             <?php 
-                    require_once("./models/database.php");
+                    require_once("./models/post.php");
                     $users = getuser();
                     $posts = getPost();
                     foreach ($posts as $post ):                       
@@ -31,7 +31,8 @@
                             <strong class="p-2 profile_name"><?= $users['first_name']; ?></strong>
                             <strong class=" profile_name"><?= $users['last_name']; ?></strong>
                             <hr>
-                            <span><?= $post['post_date'] ?></span>
+                            <?php date_default_timezone_set('Asia/Phnom_Penh'); ?>
+                            <span><?= $post['post_date']?></span>
                     </div>
                     <div class="dropdown">
                         <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown">
@@ -50,16 +51,16 @@
                 </div>
                 <div class="like-comment d-flex justify-content-between">
                     <p class="like">125  likes</p>
-                    <p class="comment">125  comments</p>
+                    <p class="comment">125 comments</p>
                 </div>
                 <div class="card-footer">
                     <div>
-                        <a href=""><i class="far fa-thumbs-up fa-2x"></i></a>
-                        <span>Like</span>
+                        <a href="#"><i class="far fa-thumbs-up fa-2x focus"></i></a>
+                        <span style="font-size: 20px;">Like</span>
                     </div>
                     <div>
-                        <a href=""><i class="far fa-comment-alt fa-2x"></i></a>
-                        <span>Comment</span>
+                        <a href="../index.php?pages=comment_view"><i class="far fa-comment-alt fa-2x"></i></a>
+                        <span style="font-size: 20px;">Comment</span>
                     </div>
                 </div>
             </div>
@@ -69,4 +70,4 @@
             <div class="col-3">
             </div>
         </div>
-</div>
+    </div>

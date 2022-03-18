@@ -1,5 +1,5 @@
 <?php
-require_once("../models/database.php");
+require_once("../models/post.php");
     
 $file_name = $_FILES['file_name']['name'];
 $description = $_POST['description'];

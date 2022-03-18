@@ -106,12 +106,11 @@ ul li a {
     font-size: 20px;
 }
 
-
-/* .container .card-head-profile .cover {
+.container .card-head-profile .cover {
     height: 250px;
     width: 100%;
     background-image: url(../uploads/girl.jpg);
-} */
+}
 
 .active {
     color: rgb(8, 236, 0);

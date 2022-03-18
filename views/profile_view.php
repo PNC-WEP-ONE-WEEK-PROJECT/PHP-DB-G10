@@ -1,5 +1,5 @@
 <?php
-    require_once('./models/database.php');
+    require_once('./models/post.php');
 ?>
 <?php
     $users = getuser();
@@ -16,7 +16,7 @@
                             
                         </div>
                         <div style="text-align:center;">
-                            <img src="../uploads/<?= $post['image']; ?>" alt="image" class="rounded-circle"  id="New-profile" width="50%">
+                            <img src="../uploads/<?= $post['image']; ?>" alt="image" class="rounded-circle "  id="New-profile" width="50%" style="margin-top:-130px">
                             <div>
                                 <h3>
                                     <strong class="p-2 profile_name"><?= $users['first_name']; ?></strong>

@@ -1,5 +1,5 @@
 <?php
-require_once("../models/database.php");
+require_once("../models/post.php");
 
 $id=$_GET['id'];
 $deleteSuccess = deletePost($id);
