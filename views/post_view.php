@@ -18,7 +18,7 @@
                 </div>
             </div>
             <?php 
-                    require_once("./models/database.php");
+                    require_once("./models/post.php");
                     $users = getuser();
                     $posts = getPost();
                     foreach ($posts as $post ):                       
@@ -31,13 +31,14 @@
                             <strong class="p-2 profile_name"><?= $users['first_name']; ?></strong>
                             <strong class=" profile_name"><?= $users['last_name']; ?></strong>
                             <hr>
-                            <span><?= $post['post_date'] ?></span>
+                            <?php date_default_timezone_set('Asia/Phnom_Penh'); ?>
+                            <span><?= $post['post_date']=("F j, Y, g:i a");; ?></span>
                     </div>
                     <div class="dropdown">
                         <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown">
                         </i>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Edit post</a></li>
+                        <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit post</a></li>
                         <li><a href="../controllers/delete_controller.php?id=<?php echo $post['post_id'];?>" class="dropdown-item" >Delete post</a></li>
                         </ul>
                     </div>
@@ -54,7 +55,7 @@
                 </div>
                 <div class="card-footer">
                     <div>
-                        <a href=""><i class="far fa-thumbs-up fa-2x"></i></a>
+                        <a href="#"><i class="far fa-thumbs-up fa-2x focus"></i></a>
                         <span>Like</span>
                     </div>
                     <div>
@@ -69,4 +70,6 @@
             <div class="col-3">
             </div>
         </div>
+    </div>
+
 </div>

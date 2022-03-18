@@ -1,5 +1,6 @@
 <?php
-    require_once('./models/database.php');
+    
+    require_once('./models/post.php');
 ?>
 <?php
     $users = getuser();
@@ -54,7 +55,7 @@
                                 <i class="fas fa-map-marker-alt "></i>
                                 <label>From svay antor,prey veng</label>
                             </div>                         
-                    </div>
+                </div>
                 </div>
                     </div>
                     <div class="card-footer footer-post">
