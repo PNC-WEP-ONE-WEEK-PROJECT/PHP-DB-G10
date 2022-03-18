@@ -103,17 +103,18 @@ ul li a {
 
 .card-head-info i {
     color: #007AEB;
-    /* font-size: 20px; */
+    font-size: 20px;
 }
 
-.container .card-head-profile .cover {
+
+/* .container .card-head-profile .cover {
     height: 250px;
     width: 100%;
     background-image: url(../uploads/girl.jpg);
-}
+} */
 
 .active {
-    text-decoration: underline;
+    color: rgb(8, 236, 0);
 }
 
 

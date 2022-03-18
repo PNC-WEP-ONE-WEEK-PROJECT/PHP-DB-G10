@@ -1,6 +1,9 @@
 <?php
     require_once('./models/database.php');
 ?>
+<?php
+    $users = getuser();
+?>
 <form action="" method="post">
 <div class="container container-profile">
     <div class="row">
@@ -13,8 +16,17 @@
                             
                         </div>
                         <div style="text-align:center;">
-                            <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="30%" style="border-radius:130px;margin-top:-130px">
-                            <i class="fa fa-camera fa-2x" style="margin-left: -40px;color:#007AEB"></i>
+                            <img src="../uploads/<?= $post['image']; ?>" alt="image" class="rounded-circle"  id="New-profile" width="50%">
+                            <div>
+                                <h3>
+                                    <strong class="p-2 profile_name"><?= $users['first_name']; ?></strong>
+                                    <strong class=" profile_name"><?= $users['last_name']; ?></strong>
+                                </h3>
+                            </div>
+                            <div class="custom-file">
+                                <label class="btn btn-primary m-1" for="files" >New profile</label>
+                                <input type="file" onChange=loadFile(event) name="file_name" id="files" style="display:none">
+                            </div>
                         </div>
                     <div class="card-body mb-10">
                     <div class="card shadow-sm p-3 mb-5 bg-white rounded-10" style="margin-top:30px;">
@@ -54,3 +66,9 @@
         </div>
     </div>
 </form>
+<script>
+    var loadFile = function(event) {
+        var image = document.getElementById('New-profile');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    };
+</script>

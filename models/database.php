@@ -11,7 +11,7 @@ function getuser() {
 //get post from databases
 function getPost() {
     global $db;
-    $statement = $db -> query("SELECT post_id,Description,image,user_id from posts");
+    $statement = $db -> query("SELECT post_id,Description,image,user_id, post_date from posts order by post_id desc");
     $posts = $statement -> fetchAll();
     return $posts;
 }

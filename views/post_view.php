@@ -7,12 +7,12 @@
                     <div class="card shadow-sm p-3 mb-5 bg-white rounded-30">
                 <div class="profile">
                         <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="8%">
-                        <button class="button"><a href="../index.php?pages=create_view"><span class="p-2 profile_name">What's on your mind ?</span></a></button>
+                        <button class="button"><a href="../index.php?pages=create_view" class = "text-secondary text-decoration-none">What's on your mind ?</a></button>
                 </div>
                 <hr>
                 <div class="post-photo">
                     <div>
-                        <i class="fas fa-photo-video fa-2x"  style="color:#007AEB"></i>
+                        <i class="fas fa-photo-video fa-2x"  style="color:rgb(8, 236, 0)"></i>
                         <span>Photos/Video</span>
                     </div>
                 </div>
@@ -27,9 +27,11 @@
             <div class="card shadow-sm p-3 mb-5 bg-white rounded-30">
                 <div class="card-head">
                     <div class="profile p-2">
-                            <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="8%">
+                            <img src="../uploads/<?= $post['image']; ?>" alt="profile" class="img-fluid rounded-circle"  id="New-profile"  width="8%">
                             <strong class="p-2 profile_name"><?= $users['first_name']; ?></strong>
                             <strong class=" profile_name"><?= $users['last_name']; ?></strong>
+                            <hr>
+                            <span><?= $post['post_date'] ?></span>
                     </div>
                     <div class="dropdown">
                         <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown">
@@ -45,6 +47,10 @@
                         <p><?= $post['Description']; ?></p>
                     </div>
                     <img src="../uploads/<?= $post['image']; ?>" alt="image" class="img-fluid"  >
+                </div>
+                <div class="like-comment d-flex justify-content-between">
+                    <p class="like">125  likes</p>
+                    <p class="comment">125  comments</p>
                 </div>
                 <div class="card-footer">
                     <div>
