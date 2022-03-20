@@ -5,18 +5,18 @@
    $post = getDataId($post_id);
 ?>
 <form action="../controllers/comment_controller.php" method="GET">
-
     <div class="container container-create">
         <div class="row">
                 <div class="col-3">
                 </div>
                 <div class="col-6">
                     <div class="card shadow-sm p-3 mb-5 bg-white rounded-30">
-                        <div class="card-head-create">
+                        <div class="card-header-create">
                             <div class="profile p-2">
                                     <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="8%">
                                     <strong class="p-2 profile_name">Rady Y</strong>
                             </div>
+                        </div>
                         <?php 
                             require_once('./models/comment.php');
                             $comments = getComments($post_id);
@@ -34,15 +34,15 @@
                                             <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown">
                                             </i>
                                             <ul class="dropdown-menu">
-                                            <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit post</a></li>
-                                            <li><a href="../controllers/delete_controller.php?id=<?php ?>" class="dropdown-item" >Delete post</a></li>
-                                            </ul>
+                                            <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit comment</a></li>
+                                            <li><a href="../controllers/delete_comment.php?id=<?php echo $comment['comment_id'];?>" class="dropdown-item" >Delete comment</a></li>
                                     </div>
                                 </div>
                                 <div class="p-2"> 
                                     <p> Comment : <?php  echo $comment['comment'];?></p>
                                 </div>
                             </div>
+                        </div>
                         <?php
                             endforeach;
                         ?>

@@ -19,5 +19,15 @@ function createComments($comment_desc,$post_id) {
     ]);
     return ($statement -> rowCount()==1);
 }
+// Delete comment
+function deleteComment($comment_id){
+    global $db;
+    $statment=$db->prepare("DELETE FROM comments WHERE comment_id=:comment_id");
+    $statment->execute([
+        ':comment_id' => $comment_id,
+    ]);
+    return($statment->rowCount()==1);
+}
+?>
 
 ?>
