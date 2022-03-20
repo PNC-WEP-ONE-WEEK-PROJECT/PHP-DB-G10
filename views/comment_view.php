@@ -1,8 +1,11 @@
 <?php
    require_once('./models/post.php');
-
+   require_once('./models/comment.php');
+   $post_id = $_GET['post_id'];
+   $post = getDataId($post_id);
 ?>
-<form action="../controllers/create_controller.php" enctype="multipart/form-data" method="post">
+<form action="../controllers/comment_controller.php" method="GET">
+
     <div class="container container-create">
         <div class="row">
                 <div class="col-3">
@@ -14,16 +17,41 @@
                                     <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="8%">
                                     <strong class="p-2 profile_name">Rady Y</strong>
                             </div>
+                        <?php 
+                            require_once('./models/comment.php');
+                            $comments = getComments($post_id);
+                            foreach($comments as $comment):
+                        ?>
                         <div class="card-body">
-                        <p>What's somthing you want to comment on this post ?</p>
-                        <div class="input-group flex-nowrap">
-                            <input type="text" class="form-control" placeholder="Add your comment here..." aria-label="Username" aria-describedby="addon-wrapping">
-                        </div>
-                                                        </div>
-                        </div>
-                        <div class="card-footer footer-post">
-                            <button type="submit" name="post" class="btn btn-primary">Add comment</button>
-                        </div>
+                            <!-- Display comment -->
+                            <div class="card shadow p-3 mb-5 bg-white ">
+                                <div class="card-comment card-header rounded-pill">
+                                    <div class="profile p-2">
+                                        <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="6%">
+                                        <span class="p-10 profile_name">Rady Y</span>
+                                    </div>
+                                    <div class="dropdown">
+                                            <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown">
+                                            </i>
+                                            <ul class="dropdown-menu">
+                                            <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit post</a></li>
+                                            <li><a href="../controllers/delete_controller.php?id=<?php ?>" class="dropdown-item" >Delete post</a></li>
+                                            </ul>
+                                    </div>
+                                </div>
+                                <div class="p-2"> 
+                                    <p> Comment : <?php  echo $comment['comment'];?></p>
+                                </div>
+                            </div>
+                        <?php
+                            endforeach;
+                        ?>
+                            <!-- Add comment -->
+                            <form action="../controllers/comment_controller.php" class="form-comment p-3" method="GET">
+                                <input type="text" class="form-control p-3 comment" name="comment_desc" placeholder="Add comment ...">
+                                <input type="hidden" value="<?php echo $post['post_id'];?>" name="post_id">
+                                <button type="submit" name="submit-comment" class="btn btn-primary mt-3">Add comment</button>
+                            </form>                      
                     </div>
                 <div class="col-3">
                 </div>

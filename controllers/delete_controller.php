@@ -9,8 +9,4 @@ if($deleteSuccess){
     echo "Can't delete post with id";
 }
 
-
-
-
-
 ?>

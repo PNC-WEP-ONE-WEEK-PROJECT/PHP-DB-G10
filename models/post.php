@@ -1,6 +1,8 @@
+
 <?php
 require_once("database.php");
 // get user from databases
+
 function getuser() {
     global $db;
     $statement = $db -> query("SELECT user_id,first_name,last_name,gender,email,password from users");
@@ -38,5 +40,37 @@ function deletePost($id)
         ':post_id' => $id,
     ]);
     return ($statement->rowCount()==1);
+}
+
+// function get data by ID
+
+function getDataId($post_id)
+{
+    global $db;
+    $statement=$db -> prepare("SELECT post_id, description, image FROM posts WHERE post_id=:post_id;");
+    $statement -> execute([
+        ':post_id' => $post_id
+    ]);
+    $post = $statement->fetch();
+    return $post;
+    
+}
+
+//function to update Post
+
+function updatePost($post_id, $description, $file_name)
+{
+
+    $target = "../uploads/".$_FILES['file_name']['name'];
+    move_uploaded_file($_FILES['file_name']['tmp_name'],$target);
+    
+    global $db;
+    $statement = $db->prepare("update  posts set description=:description, image=:image WHERE post_id=:post_id");
+    $statement->execute([
+        ':description' => $description,
+        ':image' => $file_name,
+        ':post_id' => $post_id
+
+    ]);
 }
 ?>

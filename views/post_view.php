@@ -32,13 +32,14 @@
                             <strong class=" profile_name"><?= $users['last_name']; ?></strong>
                             <hr>
                             <?php date_default_timezone_set('Asia/Phnom_Penh'); ?>
+
                             <span><?= $post['post_date']?></span>
                     </div>
                     <div class="dropdown">
                         <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown">
                         </i>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Edit post</a></li>
+                        <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit post</a></li>
                         <li><a href="../controllers/delete_controller.php?id=<?php echo $post['post_id'];?>" class="dropdown-item" >Delete post</a></li>
                         </ul>
                     </div>
@@ -50,17 +51,20 @@
                     <img src="../uploads/<?= $post['image']; ?>" alt="image" class="img-fluid"  >
                 </div>
                 <div class="like-comment d-flex justify-content-between">
-                    <p class="like">125  likes</p>
-                    <p class="comment">125 comments</p>
+                    <p class="like">125K  likes</p>
+                    <p class="comment">125K comments</p>
                 </div>
                 <div class="card-footer">
                     <div>
                         <a href="#"><i class="far fa-thumbs-up fa-2x focus"></i></a>
                         <span style="font-size: 20px;">Like</span>
-                    </div>
-                    <div>
-                        <a href="../index.php?pages=comment_view"><i class="far fa-comment-alt fa-2x"></i></a>
-                        <span style="font-size: 20px;">Comment</span>
+                        <span>Like</span>
+                    </div> 
+                    <div class="comment-group col-5" style="cursor: pointer;">  
+                    
+                        <a class="text-decoration-none"  href="../index.php?pages=comment_view&post_id=<?= $post['post_id']?>">
+                            <img src="../images/comment.png" class="comment mt-0" alt="" width="8%"> <label for="comment">Comment</label>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -71,3 +75,4 @@
             </div>
         </div>
     </div>
+</div>
