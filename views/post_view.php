@@ -22,25 +22,22 @@
                     $users = getuser();
                     $posts = getPost();
                     foreach ($posts as $post ):                       
-                    
                 ?>
-            <div class="card shadow-sm p-3 mb-5 bg-white rounded-30">
-                <div class="card-head">
+            <div class="card shadow-sm p-3 mb-5 bg-white rounded-30 ">
+                <div class="card-head d-flex justify-content-between">
                     <div class="profile p-2">
                             <img src="../uploads/<?= $post['image']; ?>" alt="profile" class="img-fluid rounded-circle"  id="New-profile"  width="8%">
                             <strong class="p-2 profile_name"><?= $users['first_name']; ?></strong>
                             <strong class=" profile_name"><?= $users['last_name']; ?></strong>
                             <hr>
                             <?php date_default_timezone_set('Asia/Phnom_Penh'); ?>
-
                             <span><?= $post['post_date']?></span>
                     </div>
                     <div class="dropdown">
-                        <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown">
-                        </i>
+                        <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown"></i>
                         <ul class="dropdown-menu">
-                        <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit post</a></li>
-                        <li><a href="../controllers/delete_controller.php?id=<?php echo $post['post_id'];?>" class="dropdown-item" >Delete post</a></li>
+                            <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit post</a></li>
+                            <li><a href="../controllers/delete_controller.php?id=<?php echo $post['post_id'];?>" class="dropdown-item" >Delete post</a></li>
                         </ul>
                     </div>
                 </div>
@@ -54,17 +51,22 @@
                     <p class="like">125K  likes</p>
                     <p class="comment">125K comments</p>
                 </div>
-                <div class="card-footer">
+                <div class="card-footer d-flex justify-content-evenly text-center">
                     <div>
-                        <a href="#"><i class="far fa-thumbs-up fa-2x focus"></i></a>
-                        <span style="font-size: 20px;">Like</span>
-                        <span>Like</span>
-                    </div> 
+                        <i class="far fa-thumbs-up fa-2x focus"></i>
+                            <span >
+                                <a class="text-decoration-none text-black"  href="../index.php?pages=comment_view&post_id=<?= $post['post_id']?>" style="font-size: 18px;">
+                                    <img src="../images/comment.png" class="comment mt-0" alt="" width="8%"> <label for="comment">Comment</label>
+                                </a>
+                            </span>
+                        </div> 
                     <div class="comment-group col-5" style="cursor: pointer;">  
-                    
-                        <a class="text-decoration-none"  href="../index.php?pages=comment_view&post_id=<?= $post['post_id']?>">
-                            <img src="../images/comment.png" class="comment mt-0" alt="" width="8%"> <label for="comment">Comment</label>
-                        </a>
+                        <i class="far fa-comment-alt fa-2x focus"></i>
+                        <span >
+                            <a class="text-decoration-none text-black"  href="../index.php?pages=comment_view&post_id=<?= $post['post_id']?>" style="font-size: 18px;">
+                                <img src="../images/comment.png" class="comment mt-0" alt="" width="8%"> <label for="comment">Comment</label>
+                            </a>
+                        </span>
                     </div>
                 </div>
             </div>

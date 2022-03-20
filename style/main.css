@@ -20,7 +20,7 @@ nav {
 }
 
 nav img {
-    width: 150px;
+    width: 130px;
 }
 
 ul {
@@ -47,6 +47,11 @@ ul li {
 ul li a {
     text-decoration: none;
     color: rgb(0, 0, 0);
+}
+
+.active {
+    color: rgb(8, 236, 0);
+    text-decoration: underline;
 }
 
 
@@ -110,10 +115,6 @@ ul li a {
     height: 250px;
     width: 100%;
     background-image: url(../uploads/girl.jpg);
-}
-
-.active {
-    color: rgb(8, 236, 0);
 }
 
 
