@@ -127,3 +127,11 @@ ul li a {
     display: flex;
     align-items: center;
 }
+
+
+/* .....like & comment */
+a:hover{
+    color: rgb(8, 236, 0); 
+    cursor: pointer;
+
+}

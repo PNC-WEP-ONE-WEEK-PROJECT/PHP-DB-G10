@@ -15,7 +15,7 @@ $comment=$_GET['comment'];
 
 updateCmt($comment_id, $comment);
 
- header('location: /index.php');
+header('location: /index.php');
 ?>
 
 

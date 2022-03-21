@@ -36,7 +36,7 @@
                     <div class="dropdown">
                         <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown"></i>
                         <ul class="dropdown-menu">
-                            <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit post</a></li>
+                            <li><a href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit post</a></li>
                             <li><a href="../controllers/delete_controller.php?id=<?php echo $post['post_id'];?>" class="dropdown-item" >Delete post</a></li>
                         </ul>
                     </div>
@@ -66,7 +66,7 @@
                         <i class="far fa-thumbs-up fa-2x focus"></i>
                             <span >
                                 <a class="text-decoration-none text-black"  href="../controllers/like_controller.php?post_id=<?= $post['post_id']?>" style="font-size: 18px;">
-                                     <label>Like</label>
+                                     <label class="color">Like</label>
                                 </a>
                             </span>
                         </div> 
@@ -74,7 +74,7 @@
                         <i class="far fa-comment-alt fa-2x focus"></i>
                         <span >
                             <a class="text-decoration-none text-black"  href="../index.php?pages=comment_view&post_id=<?= $post['post_id']?>" style="font-size: 18px;">
-                                <label for="comment">Comment</label>
+                                <label class="color" for="comment">Comment</label>
                             </a>
                         </span>
                     </div>
