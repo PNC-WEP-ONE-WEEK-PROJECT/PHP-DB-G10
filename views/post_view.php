@@ -1,4 +1,4 @@
-<div class="container  ">
+<div class="container">
     <!-- Your code here -->
         <div class="row">
             <div class="col-3">
@@ -7,7 +7,7 @@
                     <div class="card shadow-sm p-3 mb-5 bg-white rounded-30">
                 <div class="profile">
                         <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="8%">
-                        <button class="button"><a href="../index.php?pages=create_view" class = "text-secondary text-decoration-none">What's on your mind ?</a></button>
+                        <button class="button"><a href="../index1.php?pages=create_view" class = "text-secondary text-decoration-none">What's on your mind ?</a></button>
                 </div>
                 <hr>
                 <div class="post-photo">
@@ -23,7 +23,7 @@
                     $posts = getPost();
                     foreach ($posts as $post ):                       
                 ?>
-            <div class="card shadow-sm p-3 mb-5 bg-white rounded-30 ">
+            <div class="card shadow-sm p-3 mb-5 bg-white rounded-30">
                 <div class="card-head d-flex justify-content-between">
                     <div class="profile p-2">
                     <img src="../images/cher rady.jpg" alt="profile" class="image-profile" width="8%">
@@ -59,22 +59,21 @@
                 ?>
                 <div class="like-comment d-flex justify-content-between">
                     <p class="like" style="font-size: 23px;"><?php echo $numberOflike ?>  likes</p>
-                    <p class="comment" style="font-size: 23px;"> comments</p>
                 </div>
                 <div class="card-footer d-flex justify-content-evenly text-center">
                     <div>
                         <i class="far fa-thumbs-up fa-2x focus"></i>
                             <span >
-                                <a class="text-decoration-none text-black"  href="../controllers/like_controller.php?post_id=<?= $post['post_id']?>" style="font-size: 18px;">
-                                     <label>Like</label>
+                                <a class="text-decoration-none text-black "  href="../controllers/like_controller.php?post_id=<?= $post['post_id']?>" style="font-size: 19px;">
+                                     <label for="like" class=" focus">Like</label>
                                 </a>
                             </span> 
                         </div> 
                     <div class="comment-group col-5" style="cursor: pointer;">  
                         <i class="far fa-comment-alt fa-2x focus"></i>
                         <span >
-                            <a class="text-decoration-none text-black"  href="../index.php?pages=comment_view&post_id=<?= $post['post_id']?>" style="font-size: 18px;">
-                                <label for="comment">Comment</label>
+                            <a class="text-decoration-none text-black "  href="../index1.php?pages=comment_view&post_id=<?= $post['post_id']?>" style="font-size: 19px;">
+                                <label for="comment"  class=" focus">Comment</label>
                             </a>
                         </span>
                     </div>

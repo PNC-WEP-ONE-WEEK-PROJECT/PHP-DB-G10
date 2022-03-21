@@ -29,7 +29,7 @@
                         </div>
                         <div class="card-footer footer-post">
                             <button type="submit" name="post" class="btn btn-primary">Post</button>
-                            <a href="/index.php?pages=index" class="btn btn-danger">Cancel</a>
+                            <a href="/index1.php?pages=index1" class="btn btn-danger">Cancel</a>
                         </div>
                     </div>
                     <div class="col-3">

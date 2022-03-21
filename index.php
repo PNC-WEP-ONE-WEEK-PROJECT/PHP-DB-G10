@@ -27,9 +27,7 @@ require_once('models/database.php');
             </div>
             <div class="row ">
                 <div class="col-">
-                    <a href="views/post_view.php" >
                         <button type="submit" class="btn btn-danger">Log In</button>
-                    </a>
                 </div>
             </div>
         </div>        

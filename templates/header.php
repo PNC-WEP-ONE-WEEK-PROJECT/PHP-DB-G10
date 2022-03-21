@@ -24,7 +24,7 @@
          <ul>
             <li class="active"><a href="../index1.php?pages=post_view"><i class="fas fa-home fa-2x <?php if ($active == "post_view") echo "active" ?>"></i></a></li>
             <li class="active"><a href="../index1.php?pages=profile_view"><i class="fas fa-user-circle fa-2x <?php if ($active == "profile_view") echo "active" ?> "></i></a></li>
-            <li class="active"><a href=""><i class="fas fa-sign-out-alt fa-2x"></i></a></li>
+            <li class="active"><a href="../index.php"><i class="fas fa-sign-out-alt fa-2x"></i></a></li>
         </ul>
     </nav>
     
