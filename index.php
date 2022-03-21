@@ -1,7 +1,4 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<?php
-require_once('models/database.php');
-?>
 <form action="controllers/login_controller.php" method="get">
     <div class="row container mt-3 w-70 mx-auto">
         
