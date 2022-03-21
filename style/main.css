@@ -13,7 +13,6 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: #000;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -128,10 +127,15 @@ ul li a {
     align-items: center;
 }
 
+<<<<<<< HEAD
 
 /* .....like & comment */
 a:hover{
     color: rgb(8, 236, 0); 
     cursor: pointer;
 
+=======
+.focus {
+    color: #007AEB;
+>>>>>>> 96be251c7553a5322c5184ee458eb4e318a1199c
 }

@@ -1,4 +1,6 @@
+
 <?php 
+
 require_once("../models/post.php");
 $users = getuser();
  
@@ -8,7 +10,7 @@ if ($_GET['first_name'] == $users['first_name'] && $_GET['last_name'] = $users['
 }
 
 else {
-    echo "Your password not correct !!!";
+    header('location: /index.php');
     
 }
     

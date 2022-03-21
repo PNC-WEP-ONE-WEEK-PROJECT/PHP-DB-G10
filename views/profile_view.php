@@ -13,7 +13,6 @@
                 <div class="card shadow-sm p-3 mb-5 bg-white rounded-30">
                     <div class="card-head-profile">
                         <div class="cover">
-                            
                         </div>
                         <div style="text-align:center;">
                             <img src="../images/cher rady.jpg" alt="image" class="rounded-circle "  id="New-profile" width="50%" style="margin-top:-130px">
@@ -58,7 +57,7 @@
                 </div>
                     </div>
                     <div class="card-footer footer-post">
-                    <button type="submit" class="btn btn-primary">Edit info</button>
+                    <button type="submit" class="btn btn-primary"><a href="../index1.php?pages=create_view" class = "text-secondary text-decoration-none text-light">Add post</button>
                     </div>
                 </div>
             <div class="col-3">
