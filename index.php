@@ -9,36 +9,14 @@ require_once('models/database.php');
                     <h5 class='text'>Sharing and contacting with people around the world !</h5>
         </div>
         <div class="row col-4 bg-primary mt-3 rounded">
-            
             <div class="row ">
                 <div class="col-md-6">
                         <label for="input_first_name" class="form-label text-light">Frist Name</label>
-                        <input type="tex" class="form-control" name="frist_name" placeholder="First Name">
+                        <input type="text" class="form-control" name="first_name" placeholder="First Name">
                 </div>
                 <div class="col-md-6">
                         <label for="input_last_name" class="form-label text-light ">Last Name</label>
                         <input type="text" class="form-control" name="last_name" placeholder="last Name" >
-                </div>
-            </div>
-            <div class="row ">
-                <label for="" class="form-label text-light ">Gender</label>
-                <div class="col-12 form-check">
-                        <input class="" type="radio" name="male"  value="Male">
-                        <label class="form-check-label " for="radio_check">
-                            Male
-                        </label>
-                </div>
-                <div class="col-12 form-check">
-                        <input class="" type="radio" name="female" value="Female">
-                        <label class="check-label " for="radio_check">
-                            Female
-                        </label>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-12">
-                        <label for="input_email" class="form-label text-light ">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Your email address">
                 </div>
             </div>
             <div class="row ">
@@ -48,10 +26,7 @@ require_once('models/database.php');
                 </div>
             </div>
             <div class="row ">
-                <div class="col-12">
-                    <a href="views/create_view.php" >
-                        <button type="submit" class="btn btn-warning">Create</button>
-                    </a>
+                <div class="col-">
                     <a href="views/post_view.php" >
                         <button type="submit" class="btn btn-danger">Log In</button>
                     </a>

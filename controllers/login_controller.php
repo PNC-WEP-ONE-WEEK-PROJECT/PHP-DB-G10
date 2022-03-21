@@ -1,16 +1,16 @@
 <?php 
 require_once("../models/post.php");
-$user = getuser();
-$validuser="";
-$notValiduser="";
+$users = getuser();
  
-// if $_GET['fist_name'] == $user['fist_name'] && $_GET['last_name'] = $user['last_name'] && $_GET['password'] == $user['password']:
-
-
-
-
-
+if ($_GET['first_name'] == $users['first_name'] && $_GET['last_name'] = $users['last_name'] &&  $_GET['password'] == $users['password']){
     
-header('location: ./index1.php');
+    header('location: /index1.php');
+}
+
+else {
+    echo "Your password not correct !!!";
+    
+}
+    
     
 ?>
