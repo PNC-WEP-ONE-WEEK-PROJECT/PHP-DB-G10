@@ -15,7 +15,7 @@
                         <div class="cover">
                         </div>
                         <div style="text-align:center;">
-                            <img src="../images/cher rady.jpg" alt="image" class="rounded-circle "  id="New-profile" width="50%" style="margin-top:-130px">
+                            <img src="../images/cher rady.jpg" alt="image" class="rounded-circle image-profile "  id="New-profile" width="50%" style="margin-top:-130px">
                             <div>
                                 <h3>
                                     <strong class="p-2 profile_name"><?= $users['first_name']; ?></strong>

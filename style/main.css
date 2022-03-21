@@ -125,3 +125,7 @@ ul li a {
 .focus {
     color: #007AEB;
 }
+
+.image-profile {
+    border: 2px solid #007AEB;
+}
