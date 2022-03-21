@@ -10,6 +10,21 @@ function getComments($post_id){
     return $comments;
 }
 
+//get comment id , 
+function getcmtId($comment_id)
+{
+    global $db;
+    $statement=$db -> prepare("SELECT comment_id,  comment FROM comments WHERE comment_id=:comment_id;");
+    $statement -> execute([
+        ':comment_id' => $comment_id,
+        
+    ]);
+    $cmt = $statement->fetch();
+    return $cmt;
+    
+}
+// 
+
 function createComments($comment_desc,$post_id) {
     global $db;
     $statement = $db->prepare("INSERT INTO comments(comment,post_id) VALUES (:comment_desc,:id_post)");
@@ -28,6 +43,25 @@ function deleteComment($comment_id){
     ]);
     return($statment->rowCount()==1);
 }
-?>
+
+
+
+// update comments
+
+function updateCmt($comment_id, $comment)
+{
+
+    
+    global $db;
+    $statement = $db->prepare("update  comments set comment=:comment WHERE comment_id=:comment_id");
+    $statement->execute([
+        ':comment' => $comment,
+        
+        ':comment_id' => $comment_id
+
+    ]);
+}
+
+
 
 ?>
