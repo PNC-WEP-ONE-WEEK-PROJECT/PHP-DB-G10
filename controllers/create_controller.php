@@ -6,6 +6,6 @@ $description = $_POST['description'];
 
 createPost($description, $file_name);
     
-header('location: ../index.php');
+header('location: ../index1.php');
     
 ?>
