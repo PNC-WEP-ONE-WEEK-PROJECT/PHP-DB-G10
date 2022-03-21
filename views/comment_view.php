@@ -34,7 +34,7 @@
                                             <i class="fa fa-ellipsis-h" data-bs-toggle="dropdown">
                                             </i>
                                             <ul class="dropdown-menu">
-                                            <li><a  href="?pages=edit_view&post_id=<?php echo $post['post_id'] ?> " class="dropdown-item">Edit comment</a></li>
+                                            <li><a  href="?pages=edit_comment&comment_id=<?php echo $comment['comment_id']; ?> " class="dropdown-item">Edit comment</a></li>
                                             <li><a href="../controllers/delete_comment.php?id=<?php echo $comment['comment_id'];?>" class="dropdown-item" >Delete comment</a></li>
                                     </div>
                                 </div>
