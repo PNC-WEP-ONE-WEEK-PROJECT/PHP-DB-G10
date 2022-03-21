@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2022 at 04:51 AM
+-- Generation Time: Mar 21, 2022 at 10:42 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -34,6 +34,13 @@ CREATE TABLE `comments` (
   `post_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`comment_id`, `comment`, `user_id`, `post_id`) VALUES
+(330, 'Well done', NULL, 106);
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +51,18 @@ CREATE TABLE `likes` (
   `Post_id` int(11) NOT NULL,
   `User_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `likes`
+--
+
+INSERT INTO `likes` (`Post_id`, `User_id`) VALUES
+(106, 6),
+(106, 6),
+(106, 6),
+(106, 6),
+(106, 6),
+(106, 6);
 
 -- --------------------------------------------------------
 
@@ -58,6 +77,14 @@ CREATE TABLE `posts` (
   `user_id` int(11) DEFAULT NULL,
   `post_date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `posts`
+--
+
+INSERT INTO `posts` (`post_id`, `Description`, `image`, `user_id`, `post_date`) VALUES
+(106, '', '3.jpg', NULL, '2022-03-21 16:30:14'),
+(107, 'Hi', '4.jpg', NULL, '2022-03-21 16:41:31');
 
 -- --------------------------------------------------------
 
@@ -84,7 +111,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `gender`, `email`, `password`, `job`, `education`, `location`, `relationship`, `birth_place`) VALUES
-(3, 'HIM', 'HEY', 'M', 'radyy@gmail.com', '1234', NULL, NULL, NULL, NULL, NULL);
+(6, 'RADY', 'Y', 'M', 'rady@gmail.com', '1234', 'Work at home', 'studied at passerellesnumeriques cambodia', 'live in phnom penh', 'In relationship', 'From svay antor,prey veng');
 
 --
 -- Indexes for dumped tables
@@ -126,19 +153,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=314;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=332;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

@@ -5,7 +5,7 @@ require_once("database.php");
 
 function getuser() {
     global $db;
-    $statement = $db -> query("SELECT user_id,first_name,last_name,gender,email,password from users");
+    $statement = $db -> query("SELECT * from users");
     $users = $statement -> fetch();
     return $users;
 }

@@ -50,7 +50,6 @@ ul li a {
 
 .active {
     color: rgb(8, 236, 0);
-    text-decoration: underline;
 }
 
 
@@ -115,7 +114,7 @@ ul li a {
 .container .card-head-profile .cover {
     height: 250px;
     width: 100%;
-    background-image: url(../uploads/girl.jpg);
+    background-image: url(../images/girl.jpg);
 }
 
 .card-comment {
@@ -123,18 +122,6 @@ ul li a {
     align-items: center;
 }
 
-/* .....like & comment */
-a:hover{
-    color: rgb(8, 236, 0); 
-    cursor: pointer;
-
-}
 .focus {
     color: #007AEB;
-
-}
-
-.post-photo {
-    margin-left: 40px;
-
 }

@@ -35,23 +35,23 @@
                         <div class="mb-3">
                             <div class="p-2">
                                 <i class="fas fa-briefcase "></i>
-                                <span>Work at home</span>
+                                <span><?= $users['job']; ?></span>
                             </div>
                             <div class="p-2">
                                 <i class="fas fa-graduation-cap "></i>
-                                <label>studied at passerellesnumeriques cambodia</label>
+                                <label><?= $users['education']; ?></label>
                             </div>
                             <div class="p-2">
                                 <i class="fas fa-home "></i>
-                                <label>live in phnom penh</label>
+                                <label><?= $users['location']; ?></label>
                             </div>
                             <div class="p-2">
                                 <i class="fas fa-heart "></i>
-                                <label>in relationship</label>
+                                <label><?= $users['relationship']; ?></label>
                             </div>
                             <div class="p-2">
                                 <i class="fas fa-map-marker-alt "></i>
-                                <label>From svay antor,prey veng</label>
+                                <label><?=$users['birth_place'] ?></label>
                             </div>                         
                     </div>
                 </div>

@@ -16,7 +16,7 @@
         $active = $_GET['pages'];
     }
 ?>
-<body class="">
+<body class="bg-primary">
     <nav class="shadow-sm p-3 mb-5 bg-white rounded">
         <ul>
             <img src="../images/facebook.png"/>

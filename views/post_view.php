@@ -12,8 +12,10 @@
                 <hr>
                 <div class="post-photo">
                     <div>
-                        <i class="fas fa-photo-video fa-2x"  style="color:rgb(8, 236, 0)"></i>
-                        <span>Photos/Video</span>
+                        <a href="../index1.php?pages=create_view" class = "text-secondary text-decoration-none">
+                            <i class="fas fa-photo-video fa-2x" style="color:rgb(8, 236, 0)"></i>
+                            <span>Photos/Video</span>
+                        </a>
                     </div>
                 </div>
             </div>
