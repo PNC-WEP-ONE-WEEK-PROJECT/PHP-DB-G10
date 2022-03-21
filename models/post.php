@@ -58,7 +58,7 @@ function getDataId($post_id)
 
 //function to update Post
 
-function updatePost($post_id, $description, $file_name)
+function updatePosts($post_id, $description, $file_name)
 {
 
     $target = "../uploads/".$_FILES['file_name']['name'];
@@ -73,4 +73,20 @@ function updatePost($post_id, $description, $file_name)
 
     ]);
 }
+
+//function use for update post without udate img
+function updatePost($post_id, $description)
+{
+    
+
+
+    global $db;
+    $statement = $db->prepare("update  posts set description=:description WHERE post_id=:post_id");
+    $statement->execute([
+        ':description' => $description,
+        ':post_id' => $post_id
+
+    ]);
+}
+
 ?>
