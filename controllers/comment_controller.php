@@ -5,5 +5,5 @@
     $post_id = $_GET['post_id'];
     createComments($comment_desc,$post_id);
 
-    header('location:/index.php');
+    header('location:/index1.php');
 ?>

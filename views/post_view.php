@@ -68,7 +68,7 @@
                                 <a class="text-decoration-none text-black"  href="../controllers/like_controller.php?post_id=<?= $post['post_id']?>" style="font-size: 18px;">
                                      <label class="color">Like</label>
                                 </a>
-                            </span>
+                            </span> 
                         </div> 
                     <div class="comment-group col-5" style="cursor: pointer;">  
                         <i class="far fa-comment-alt fa-2x focus"></i>

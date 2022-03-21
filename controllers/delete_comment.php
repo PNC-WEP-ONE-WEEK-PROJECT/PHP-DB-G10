@@ -5,7 +5,7 @@
 $id = $_GET['id'];
 $deleteCommentSucess = deleteComment($id);
 if($deleteCommentSucess){
-    header('location: /index.php');
+    header('location: /index1.php');
 }else{
    echo "Can't delete comment with id";
 
