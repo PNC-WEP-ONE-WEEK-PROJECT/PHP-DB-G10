@@ -41,7 +41,6 @@
                                 </div> 
                             </div>
                         </div>
-                         
                             <!-- Add comment -->
                             <form action="../controllers/edit_comment.php" class="form-comment p-3" method="GET">
                                 
