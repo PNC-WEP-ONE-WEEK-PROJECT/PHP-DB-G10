@@ -77,6 +77,8 @@ ul li a {
 .container .card {
     border-radius: 20px;
     margin-top: -20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .container .card .card-footer {
@@ -116,26 +118,23 @@ ul li a {
     background-image: url(../uploads/girl.jpg);
 }
 
-
-/* ---------------------------------------------Profile------------------------------ */
-
-
-/* -------------------------------------------------comment----------------------- */
-
 .card-comment {
     display: flex;
     align-items: center;
 }
-
-<<<<<<< HEAD
 
 /* .....like & comment */
 a:hover{
     color: rgb(8, 236, 0); 
     cursor: pointer;
 
-=======
+}
 .focus {
     color: #007AEB;
->>>>>>> 96be251c7553a5322c5184ee458eb4e318a1199c
+
+}
+
+.post-photo {
+    margin-left: 40px;
+
 }
