@@ -4,7 +4,7 @@
         
         <div class="row col-4 mt-3 rounded">
             <div class="row ">  
-                        <h1 class="text text-primary">facebook</h1>
+                        <h1 class="text text-primary display-3 ">facebook</h1>
                         <h5 class='text'>Sharing and contacting with people around the world !</h5>
             </div>
              <div class=" ">
