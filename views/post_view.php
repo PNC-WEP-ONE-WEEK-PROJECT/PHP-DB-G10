@@ -21,9 +21,11 @@
             </div>
             <?php 
                     require_once("./models/post.php");
+                    require_once("./models/comment.php");
                     $users = getuser();
                     $posts = getPost();
-                    foreach ($posts as $post ):                       
+                    foreach ($posts as $post ):     
+                        $comments = countComment($post['post_id']);                    
                 ?>
             <div class="card shadow-sm p-3 mb-5 bg-white rounded-30">
                 <div class="card-head d-flex justify-content-between">
@@ -61,6 +63,7 @@
                 ?>
                 <div class="like-comment d-flex justify-content-between">
                     <p class="like" style="font-size: 23px;"><?php echo $numberOflike ?>  likes</p>
+                    <p class="like" style="font-size: 23px;"><?php echo $comments['Number_of_comment'] ?>  comments</p>
                 </div>
                 <div class="card-footer d-flex justify-content-evenly text-center">
                     <div>

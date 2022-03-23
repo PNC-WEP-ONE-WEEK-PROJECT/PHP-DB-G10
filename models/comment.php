@@ -61,7 +61,15 @@ function updateCmt($comment_id, $comment)
 
     ]);
 }
-
+// Count comment
+function countComment($post_id){
+    global $db;
+    $statement = $db ->prepare("SELECT * FROM postcomment WHERE post_id=:post_id");
+    $statement->execute([
+        'post_id' => $post_id
+    ]);
+    return $statement->fetch();
+}
 
 
 ?>

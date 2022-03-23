@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2022 at 10:42 AM
+-- Generation Time: Mar 23, 2022 at 04:52 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -39,7 +39,8 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`comment_id`, `comment`, `user_id`, `post_id`) VALUES
-(330, 'Well done', NULL, 106);
+(338, 'Well done sreyne', NULL, 113),
+(339, 'Hello vibol', NULL, 113);
 
 -- --------------------------------------------------------
 
@@ -57,12 +58,19 @@ CREATE TABLE `likes` (
 --
 
 INSERT INTO `likes` (`Post_id`, `User_id`) VALUES
-(106, 6),
-(106, 6),
-(106, 6),
-(106, 6),
-(106, 6),
-(106, 6);
+(113, 6),
+(113, 6);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `postcomment`
+-- (See below for the actual view)
+--
+CREATE TABLE `postcomment` (
+`post_id` int(11)
+,`Number_of_comment` bigint(21)
+);
 
 -- --------------------------------------------------------
 
@@ -83,8 +91,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `Description`, `image`, `user_id`, `post_date`) VALUES
-(106, '', '3.jpg', NULL, '2022-03-21 16:30:14'),
-(107, 'Hi', '4.jpg', NULL, '2022-03-21 16:41:31');
+(113, 'Not bad', '3.jpg', NULL, '2022-03-23 10:51:04');
 
 -- --------------------------------------------------------
 
@@ -112,6 +119,15 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `first_name`, `last_name`, `gender`, `email`, `password`, `job`, `education`, `location`, `relationship`, `birth_place`) VALUES
 (6, 'RADY', 'Y', 'M', 'rady@gmail.com', '1234', 'Work at home', 'studied at passerellesnumeriques cambodia', 'live in phnom penh', 'In relationship', 'From svay antor,prey veng');
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `postcomment`
+--
+DROP TABLE IF EXISTS `postcomment`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `postcomment`  AS SELECT `posts`.`post_id` AS `post_id`, count(`comments`.`comment_id`) AS `Number_of_comment` FROM (`posts` left join `comments` on(`posts`.`post_id` = `comments`.`post_id`)) GROUP BY `posts`.`post_id` ;
 
 --
 -- Indexes for dumped tables
@@ -153,13 +169,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=332;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=340;
 
 --
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
 
 --
 -- AUTO_INCREMENT for table `users`
